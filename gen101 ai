@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: royalblue;
+        }
+
+        button {
+            background-color: royalblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crocodile Fun Facts</h1>
+        <button id="factButton">Show Fact</button>
+        <div id="factDisplay">Click the button to see a fun fact!</div>
+    </div>
+    <script>
+        const facts = [
+            "Crocodiles have an incredibly powerful bite force, among the strongest of any animal.",
+            "They can hold their breath underwater for up to an hour.",
+            "Crocodiles have been around for about 200 million years, surviving the dinosaur extinction.",
+            "They have special transparent eyelids called nictitating membranes that act like goggles underwater.",
+            "Crocodiles primarily use a 'death roll' to disorient and drown their prey.",
+            "Baby crocodiles are called hatchlings and are fiercely protected by their mothers.",
+            "Some species of crocodiles can run up to 17 km/h on land for short distances.",
+            "Crocodiles play a vital role in their ecosystems by creating habitats for other species.",
+            "They swallow stones to help them digest food and regulate buoyancy.",
+            "Crocodiles have sensory pits on their skin that detect changes in water pressure, helping them sense prey."
+        ];
+
+        const factButton = document.getElementById('factButton');
+        const factDisplay = document.getElementById('factDisplay');
+
+        factButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
